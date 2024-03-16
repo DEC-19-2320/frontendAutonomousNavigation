@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# :ship: Navigational System for Autonomous Ship :ship:
 
-## Getting Started
+## Description
 
-First, run the development server:
+This is my final year project as marine engineer. Althought this projectssounds great, I was more of a typical mechanical/electrical student that mainly dealing with C/C++ and microcontroller. If currently happen to encounter bug or inefficiency on my code, feel free to contact me :smile:.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+As other autonomous navigational systems that have been developed, this projects will featured with *Statics* and *Dynamics* obstacle to be handled by the algorithm. As of now I'm more focusing on implementing global path planning that implementing A* algorithm and H3 geospatial to face static obstacle. I also adding AIS (Automatic Information System) data for future development because I will try adding some fancy ML model to get a better local path planning that can comply with CORLEGs (International Regulations for Preventing Collisions at Sea 1972) regulation.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Currently Developed :
+     
+1. Path Finding : A-star combine with H3 geospatial ***(note: maybe RRT-star I'm still looking for both of this algorithm)***
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. AIS database : currently looking for free AIS data stream ('cause I'm broke :cry:).
 
-## Learn More
+## My Ideal Design
+### 1. Location Identification
+### 2. Obstacle Identification (Enviromental Mapping)
+        - static object : Islands, Offshore Structure, Ocean Bathymetry
+        - dynamic object : Another Ship, weather (storm etc)
+### 2. Path Planning
+        - Global Path Planning : to generate path based on static object
+        - Local Path Planning : 
+### 3. Communication
 
-To learn more about Next.js, take a look at the following resources:
+## Other related Projects:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
